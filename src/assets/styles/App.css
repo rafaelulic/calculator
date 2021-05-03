@@ -1,0 +1,115 @@
+.App {
+  background-color: gainsboro ;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.light-theme {
+  background-color: #f8f8f8;
+  color: #2b2b2b;
+}
+
+.dark-theme {
+  background-color: #2b2b2b;
+  color: #f8f8f8;
+}
+
+.light-numpad {
+  background-color: #f2f2f2;
+  color: #2b2b2b;
+}
+
+.dark-numpad {
+  background-color: #2f2f2f;
+  color: #f8f8f8;
+}
+
+.calculator-wrapper {
+  border-radius: 20px;
+  min-height: 600px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  border: none;
+  font-size: 16px;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:focus {
+  border: none;
+  outline: none
+}
+
+.btn:active {
+  background-color: #1b1b1b;
+}
+
+.btn-toggle {
+  border: none;
+  margin: 5px auto;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.screen-container {
+  padding: 15px;
+  height: 150px;
+  
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.equation {
+  font-size: 20px;
+}
+
+.answer {
+  font-size: 36px;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-areas:
+    "modi modi modi oper"
+    "digi digi digi oper"
+    "digi digi digi oper"
+    "digi digi digi oper"
+    "digi digi digi oper";
+  grid-auto-columns: 1fr;
+}
+
+.subgrid {
+  display: grid;
+}
+
+.modifiers {
+  grid-area: modi;
+}
+
+.modifiers {
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.digits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.operations {
+  grid-area: oper;
+}
+
+.digits {
+  grid-area: digi;
+}
